@@ -1,5 +1,24 @@
 # Hard-Coded CNN Layer with NumPy
 
+```mermaid
+%%{ init: { 'flowchart': { 'curve': 'linear' }}}%%
+flowchart LR
+    A((Input Image)):::nodeStyle
+    B[Zero-Pad]:::procStyle
+    C[Extract 5x5 Windows]:::procStyle
+    D["Convolution
+(Normal or Dilated)"]:::procStyle
+    E((Output Feature Map)):::nodeStyle
+    
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    
+    classDef nodeStyle fill:#dfe9f3,stroke:#555,color:#000,stroke-width:1px
+    classDef procStyle fill:#f5f5f5,stroke:#999,stroke-width:1px
+```
+
 This project demonstrates how to manually implement a simple CNN-like layer using only **NumPy** and **Pillow (PIL)**—no deep learning frameworks. It includes:
 
 - **Window extraction** (patch extraction)  
